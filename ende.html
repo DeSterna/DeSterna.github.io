@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Einführung in Scratch</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+	
+	<body>
+		<div id="header">
+			<div id="headerLinks">
+				<img src="img/Scratchlogo.png" alt="Logo" height=70px>
+			</div>
+			<div id="headerRechts">
+				<h1> Dein Start ins Programmieren mit Scratch </h1>
+			</div>	
+		</div>
+		<div id="navigation">
+			<div id="naviLinks">
+				<button onclick="toggleMenu()" id="button" class="buttonGreen","green">Anfänger</button>
+			</div>
+			<div id="naviRechts">
+				<a href ='a1.html'> Schritt A1 </a> 
+				<a href ='a2.html'> Schritt A2 </a>
+				<a href ='a3.html'> Schritt A3 </a>
+				<a href ='a4.html'> Schritt A4 </a>
+				<a href ='a5.html'> Schritt A5 </a>
+				<a href ='a6.html'> Schritt A6 </a>
+				<a href ='a7.html'> Schritt A7 </a>
+				<a href ='a8.html'> Schritt A8 </a>
+				<a href ='a9.html'> Schritt A9 </a>
+			</div>
+		</div>
+		
+		<script>
+			function toggleMenu() {
+				var x = document.getElementById("naviRechts");
+				var t = document.getElementById("button");
+				if (t.innerHTML === "Anfänger") {
+					t.innerHTML = "Fortgeschritten";
+					document.getElementById("button").classList.add("buttonRed");
+					document.getElementById("button").classList.remove("buttonGreen");
+					x.innerHTML = "<a href ='f1.html'> Schritt F1 </a> <a href ='f2.html'> Schritt F2 </a><a href ='f3.html'> Schritt F3 </a><a href ='F4.html'> Schritt F4 </a><a href ='f5.html'> Schritt F5 </a><a href ='F6.html'> Schritt F6 </a><a href ='F7.html'> Schritt F7 </a><a href ='F8.html'> Schritt F8 </a><a href ='a9.html'> Schritt F9 </a>";
+				} else {
+					t.innerHTML = "Anfänger";
+					document.getElementById("button").classList.add("buttonGreen");
+					document.getElementById("button").classList.remove("buttonRed");
+					x.innerHTML = "<a href ='a1.html'> Schritt A1 </a> <a href ='a2.html'> Schritt A2 </a><a href ='a3.html'> Schritt A3 </a><a href ='a4.html'> Schritt A4 </a><a href ='a5.html'> Schritt A5 </a><a href ='a6.html'> Schritt A6 </a><a href ='a7.html'> Schritt A7 </a><a href ='a8.html'> Schritt A8 </a><a href ='a9.html'> Schritt A9 </a>";
+				}
+			}
+		</script>
+		
+		<div id="inhalt">
+		
+			<div class="eineSpalte">
+				<h2> Du hasts geschafft! </h2>
+				
+				<p> Du hast alle Schritte durchlaufen und dein vielleicht erstes richtiges Scratch-Spiel programmiert!
+				</p>
+				<p> Ab hier kannst du das Spiel um eigene Ideen erweitern. Du findest im Sprites Ordner noch einiges, was bisher ungenutzt blieb!
+				<p>
+				Wie wärs mit einem Titelbildschirm? Power-Up? Mehr Level? Ab hier ist das deine Entscheidung.
+				</p>
+				<img src="sprites/logo.png" width=400px> 
+				<img src="sprites/go.png" width=400px> 
+			</div>
+			
+		</div>
+		
+
+		
+		<div id="fusszeile">
+		<!--
+		<a href="#" class="previous">&laquo; Vorherige Seite</a> 
+		-->
+		<a href="#" class="top">zurück nach oben</a>
+		<!--
+		<a href="#" class="next">Nächste Seite  &raquo;</a>
+		-->
+		</div>
+		
+	</body>
+</html>	
+	

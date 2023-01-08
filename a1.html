@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Einführung in Scratch</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+	
+	<body>
+		<div id="navigation">
+			<div id="naviLinks">
+				<button onclick="toggleMenu()" id="button" class="buttonGreen">Anfänger</button>
+			</div>
+			<div id="naviRechts">
+				<a href ='a1.html'> Schritt A1 </a> 
+				<a href ='a2.html'> Schritt A2 </a>
+				<a href ='a3.html'> Schritt A3 </a>
+				<a href ='a4.html'> Schritt A4 </a>
+				<a href ='a5.html'> Schritt A5 </a>
+				<a href ='a6.html'> Schritt A6 </a>
+				<a href ='a7.html'> Schritt A7 </a>
+				<a href ='a8.html'> Schritt A8 </a>
+				<a href ='a9.html'> Schritt A9 </a>
+			</div>
+		</div>
+		
+		<script>
+			function toggleMenu() {
+				var x = document.getElementById("naviRechts");
+				var t = document.getElementById("button");
+				if (t.innerHTML === "Anfänger") {
+					t.innerHTML = "Fortgeschritten";
+					document.getElementById("button").classList.add("buttonRed");
+					document.getElementById("button").classList.remove("buttonGreen");
+					x.innerHTML = "<a href ='f1.html'> Schritt F1 </a> <a href ='f2.html'> Schritt F2 </a><a href ='f3.html'> Schritt F3 </a><a href ='F4.html'> Schritt F4 </a><a href ='f5.html'> Schritt F5 </a><a href ='F6.html'> Schritt F6 </a><a href ='F7.html'> Schritt F7 </a><a href ='F8.html'> Schritt F8 </a><a href ='a9.html'> Schritt F9 </a>";
+				} else {
+					t.innerHTML = "Anfänger";
+					document.getElementById("button").classList.add("buttonGreen");
+					document.getElementById("button").classList.remove("buttonRed");
+					x.innerHTML = "<a href ='a1.html'> Schritt A1 </a> <a href ='a2.html'> Schritt A2 </a><a href ='a3.html'> Schritt A3 </a><a href ='a4.html'> Schritt A4 </a><a href ='a5.html'> Schritt A5 </a><a href ='a6.html'> Schritt A6 </a><a href ='a7.html'> Schritt A7 </a><a href ='a8.html'> Schritt A8 </a><a href ='a9.html'> Schritt A9 </a>";
+				}
+			}
+		</script>
+		
+		<div id="inhalt">
+		
+			<div class="eineSpalte">
+				<h2> Schritt A1: Dateien herunterladen und Scratch öffnen </h2>
+				<p>
+					In Scratch sind zwar einige Bilder eingebaut, die man für sein eigenes Spiel nutzen kann, doch eigene Bilder verwenden gibt einem vielzählige Möglichkeiten.
+					Um das zu Testen kannst du alle Bilder des <em> Peck-Mähn</em>-Spiels herunterladen.
+					Klicke dazu <a href="sprites.zip"> hier um den Download zu starten. </a>
+				</p>
+				<p> 
+					Damit du die Bilder nutzen kannst, musst du sie zunächst entpacken. Gehe in deinen Downloads-Ordner und finde die gerade geladene Datei <em>sprites.zip</em>
+					Klicke Sie mit der rechten Maustaste an, wähle <em>Alle Extrahieren</em> und bestätige inm aufspringenden Fenster mit einem Klick auf <em> Extrahieren</em>. 
+					<details>
+						<summary>Schritt für Schritt mit Bildern</summary>
+						<div>
+							<p> 1. Unten links in der Taskleiste auf das Ordner-Symbol klicken </p>
+							<img src="img/explorer.png">
+							<p> 2. Downloads-Ordner öffnen, z.B. links oben im Schnellzugriff </p>
+							<img src="img/downloads.png">
+							<p> 3. Rechtsklick auf die Datei, dann auf <em>Alle Extrahieren</em> </p>
+							<img src="img/extrahieren.png">
+							<p> 4. Nichts im neuen Fenster verändern, auf Extrahieren klicken.</em> </p>
+							<img src="img/fenster.png">
+							<p> Nun hast du den Ordner entpackt. Die <em>.zip</em>-Datei brauchen wir nun nicht mehr, die kannst du auch löschen.<p>
+							<img src="img/zweiOrdner.png">
+						</div>	
+					</details>
+				</p>
+				<p> 
+					Um mit dem Programmieren in Scrtach loslegen zu können müssen wir natürlich Scratch noch öffnen. Dazu kannst du einfach <a href="http://www.scratch.mit.edu" target="_blank"> hier klicken um die Seite direkt zu öffen </a> oder in einem neuen Tab <em> scratch.mit.edu </em> eintippen.
+				</p>
+				<p>
+					Auf der Seite gehst du auf <em>Beginne mit dem Erstellen</em> oder klickst oben in der Navigationsleiste auf <em>Entwickeln</em>.
+					<details>
+						<summary>Video: Startknopf finden</summary>
+						<div>
+							<video controls>
+								<source src="gifs/1.webm" type="video/webm">
+							</video>
+						</div>	
+					</details>
+				</p>
+				<p> Soweit fertig? Dann klicken unten rechts zu nächsten Seite weiter! </p>
+			</div>
+		</div>
+		
+
+		
+		<div id="fusszeile">
+
+		<a href="index.html" class="previous">&laquo; Vorherige Seite</a> 
+
+		<a href="#" class="top">zurück nach oben</a>
+
+		<a href="a2.html" class="next">Nächste Seite  &raquo;</a>
+
+		</div>
+		
+	</body>
+</html>	
+	

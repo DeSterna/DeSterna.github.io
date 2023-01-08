@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Einführung in Scratch</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+
+	<body>
+		<div id="navigation">
+			<div id="naviLinks">
+				<button onclick="toggleMenu()" id="button" class="buttonRed","green">Fortgeschritten</button>
+			</div>
+			<div id="naviRechts">
+				<a href ='f1.html'> Schritt F1 </a> 
+				<a href ='f2.html'> Schritt F2 </a>
+				<a href ='f3.html'> Schritt F3 </a>
+				<a href ='f4.html'> Schritt F4 </a>
+				<a href ='f5.html'> Schritt F5 </a>
+				<a href ='f6.html'> Schritt F6 </a>
+				<a href ='f7.html'> Schritt F7 </a>
+				<a href ='f8.html'> Schritt F8 </a>
+				<a href ='f9.html'> Schritt F9 </a>
+			</div>
+		</div>
+		
+		<script>
+			function toggleMenu() {
+				var x = document.getElementById("naviRechts");
+				var t = document.getElementById("button");
+				if (t.innerHTML === "Anfänger") {
+					t.innerHTML = "Fortgeschritten";
+					document.getElementById("button").classList.add("buttonRed");
+					document.getElementById("button").classList.remove("buttonGreen");
+					x.innerHTML = "<a href ='f1.html'> Schritt F1 </a> <a href ='f2.html'> Schritt F2 </a><a href ='f3.html'> Schritt F3 </a><a href ='F4.html'> Schritt F4 </a><a href ='f5.html'> Schritt F5 </a><a href ='F6.html'> Schritt F6 </a><a href ='F7.html'> Schritt F7 </a><a href ='F8.html'> Schritt F8 </a><a href ='a9.html'> Schritt F9 </a>";
+				} else {
+					t.innerHTML = "Anfänger";
+					document.getElementById("button").classList.add("buttonGreen");
+					document.getElementById("button").classList.remove("buttonRed");
+					x.innerHTML = "<a href ='a1.html'> Schritt A1 </a> <a href ='a2.html'> Schritt A2 </a><a href ='a3.html'> Schritt A3 </a><a href ='a4.html'> Schritt A4 </a><a href ='a5.html'> Schritt A5 </a><a href ='a6.html'> Schritt A6 </a><a href ='a7.html'> Schritt A7 </a><a href ='a8.html'> Schritt A8 </a><a href ='a9.html'> Schritt A9 </a>";
+				}
+			}
+		</script>
+
+		<div id="inhalt">
+
+			<div class="eineSpalte">
+				<h2> Schritt F3: Peck-Mähn mit den Pfeiltasten bewegen</h2>
+			</div>
+			<div class="SpalteKlein">
+				<video controls>
+					<source src="gifs/f3.webm" type="video/webm">
+				</video>
+			</div>
+			<div class="SpalteGross">
+				<p> Ziel ist es, dass sich Peck-Mähn wie im Video auf der linken Seite bewegen kann. Beim Aufzeichnen wurden die Pfeiltasten gedrückt gehalten.
+				Es können auch mehrere Tasten zum diagonal gehen gedrückt werden.</p>
+				<p> Nutze zum umsetzen den <em> wiederhole fortlaufend </em> Block und vier falls-Abfragen. </p>
+				<details>
+							<summary>Warum benutzen wir eigentlich nicht einfach das <em>Wenn Taste gedrückt</em>-Ereignis?</summary>
+							<div>
+								Vielleicht hast du gesehen, dass es ein Ereignis gibt, dass <em>Wenn Taste gedrückt heißt</em>. Es wirkt erstmal intuitiv das zu verwenden,
+								hier gibt es aber ein Problem, dass wir stattdessen mit dem <em>wiederhole fortlaufend</em>-Block lösen müssen: Man muss die Taste immer neu drücken
+								und kann sie nicht gdedrückt halten. Das würde unser Spiel etwas nervig gestalten. Mit unserer Version kann man bequem die Tasten gedrpckt halten und 
+								die Figur bewegt sich in der Zeit durchgehend weiter.
+							</div>	
+						</details>
+				
+				<details>
+					<summary>Doch eine Anleitung?</summary>
+					<div>
+						<h3> Peckmähn bewegen </h3>
+						<p>
+							Ziehe den Ereignis-Block mit der Grünen Flagge in die weiße Programmierfläche in der Mitte des Fensters.
+						</p>
+						<p>
+							Damit wir Peck-Mähn durchgehend bewegen können, muss das Programm immer und immer wieder Fragen, welche Taste gedrückt wird. 
+							Dazu brauchen wir den Block <em>wiederhole fortlaufend</em> aus der Kategorie Steuerung. Baue ihn an den Ereignis-Block an.
+						</p>
+						<p> 
+							Alles was wir in diesen Block nun einfügen wird immer wieder von oben nach unten ausgeführt. Wir fügen hier eine falls-Unterscheidung ein. Die findest du
+							ebenfalls bei Steuerung.
+						</p>
+						<p> Der Falls-Block hat eine sechseckige Aussparung, in die eine Bedingung eingeügt werden muss. Wenn sie erfüllt ist, schaut das Programm in den
+						Block herein und führt aus, was dort eingefügt wird. Wir wollen aus der Kategorie <em>Fühlen</em> den Block <em> Taste gedrückt </em> verwenden.
+						Anfangs steht dort <em>Wenn Leertaste gedrückt</em>. Das ändern wir durch einen Klick auf den Pfeil aber auf <em>Pfeil nach rechts</em> und fügen es in die Aussparung ein.
+						</p>
+						<p> Baue so ein Script, dass falls der rechte Pfeil gdedrückt wird ein Zehnerschritt nach rechts gegangen wird. Wiederhole das Vorgehen für die anderen drei Richtungen.
+					</div>	
+				</details>
+				<details>
+					<summary>Alles hinbekommen? Hier gibts alle Schritte im Video zur Kontrolle oder Hilfe.</summary>
+					<div>
+						<video controls>
+							<source src="gifs/4.webm" type="video/webm">
+						</video>
+						<p>Das duplizieren von Blöcken muss man natürlich nicht machen, erneutes Hereinziehen funktioniert genauso.</p>
+					</div>	
+				</details>
+			</div>
+
+			
+		</div>
+
+
+
+		<div id="fusszeile">
+
+		<a href="f2.html" class="previous">&laquo; Vorherige Seite</a>
+
+		<a href="#" class="top">zurück nach oben</a>
+
+		<a href="f4.html" class="next">Nächste Seite  &raquo;</a>
+
+		</div>
+
+	</body>
+</html>

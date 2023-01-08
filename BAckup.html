@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Einführung in Scratch</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+	
+	<body>
+		<div id="header">
+			<div id="headerLinks">
+				<img src="img/Scratchlogo.png" alt="Logo" height=70px>
+			</div>
+			<div id="headerRechts">
+				<h1> Start in Scratch </h1>
+			</div>	
+		</div>
+		<div id="navigation">
+			<div id="naviLinks">
+				<button onclick="toggleMenu()" id="button" class="buttonGreen","green">Anfänger</button>
+			</div>
+			<div id="naviRechts">
+			</div>
+		</div>
+		
+		<script>
+			function toggleMenu() {
+				var x = document.getElementById("naviRechts");
+				var t = document.getElementById("button");
+				if (t.innerHTML === "Anfänger") {
+					t.innerHTML = "Fortgeschritten";
+					document.getElementById("button").classList.add("buttonRed");
+					document.getElementById("button").classList.remove("buttonGreen");
+					x.innerHTML = "<a href ='#'> Schritt 1F </a> <a href ='#'> Schritt 2F </a>";
+				} else {
+					t.innerHTML = "Anfänger";
+					document.getElementById("button").classList.add("buttonGreen");
+					document.getElementById("button").classList.remove("buttonRed");
+					x.innerHTML = "<a href ='#' color='white'> Schritt 1A </a> <a href ='#'> Schritt 2A </a>";
+				}
+			}
+		</script>
+		
+		<div id="inhalt">
+		
+			<div class="eineSpalte">
+				<h2> Dein Start in die Computerspieleprogrammierung mit Scratch </h2>
+				
+			</div>
+			
+			<div class="SpalteKlein">
+				<details>
+					<summary>Details</summary>
+					<div>
+						<video controls>
+							<source src="gifs/2.webm" type="video/webm">
+						</video>
+					</div>	
+				</details>
+			</div>
+			
+			<div class="SpalteGross">
+				<h3> Dein erstes Projekt starten </h3>
+				<p> 
+					Zunächst solltest du natürlich die Scratch Website öffnen. Dazu kannst du entweder <em>scratch.mit.edu</em>
+					in deinen Browser eingeben oder <a href="http://www.scratch.mit.edu"> hier klicken </a>.
+					
+					Klicke dann auf <em>"Beginne mit dem Erstellen"</em> oder oben auf <em> "Entwickeln" </em>
+					
+				</p>
+			</div>
+			
+			<div class="SpalteGross">
+			</div>
+			
+			<div class="SpalteKlein">
+			</div>			
+		</div>
+		
+		<div id="fusszeile">
+		<a href="#" class="previous">&laquo; Vorherige Seite</a>
+		<a href="#" class="top">zurück nach oben</a>
+		<a href="#" class="next">Nächste Seite  &raquo;</a>
+		</div>
+		
+	</body>
+</html>	
+	

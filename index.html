@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Einführung in Scratch</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+	
+	<body>
+		<div id="header">
+			<div id="headerLinks">
+				<img src="img/Scratchlogo.png" alt="Logo" height=70px>
+			</div>
+			<div id="headerRechts">
+				<h1> Dein Start ins Programmieren mit Scratch </h1>
+			</div>	
+		</div>
+		<div id="navigation">
+			<div id="naviLinks">
+				<button onclick="toggleMenu()" id="button" class="buttonGreen","green">Anfänger</button>
+			</div>
+			<div id="naviRechts">
+				<a href ='a1.html'> Schritt A1 </a> 
+				<a href ='a2.html'> Schritt A2 </a>
+				<a href ='a3.html'> Schritt A3 </a>
+				<a href ='a4.html'> Schritt A4 </a>
+				<a href ='a5.html'> Schritt A5 </a>
+				<a href ='a6.html'> Schritt A6 </a>
+				<a href ='a7.html'> Schritt A7 </a>
+				<a href ='a8.html'> Schritt A8 </a>
+				<a href ='a9.html'> Schritt A9 </a>
+			</div>
+		</div>
+		
+		<script>
+			function toggleMenu() {
+				var x = document.getElementById("naviRechts");
+				var t = document.getElementById("button");
+				if (t.innerHTML === "Anfänger") {
+					t.innerHTML = "Fortgeschritten";
+					document.getElementById("button").classList.add("buttonRed");
+					document.getElementById("button").classList.remove("buttonGreen");
+					x.innerHTML = "<a href ='f1.html'> Schritt F1 </a> <a href ='f2.html'> Schritt F2 </a><a href ='f3.html'> Schritt F3 </a><a href ='F4.html'> Schritt F4 </a><a href ='f5.html'> Schritt F5 </a><a href ='F6.html'> Schritt F6 </a><a href ='F7.html'> Schritt F7 </a><a href ='F8.html'> Schritt F8 </a><a href ='a9.html'> Schritt F9 </a>";
+				} else {
+					t.innerHTML = "Anfänger";
+					document.getElementById("button").classList.add("buttonGreen");
+					document.getElementById("button").classList.remove("buttonRed");
+					x.innerHTML = "<a href ='a1.html'> Schritt A1 </a> <a href ='a2.html'> Schritt A2 </a><a href ='a3.html'> Schritt A3 </a><a href ='a4.html'> Schritt A4 </a><a href ='a5.html'> Schritt A5 </a><a href ='a6.html'> Schritt A6 </a><a href ='a7.html'> Schritt A7 </a><a href ='a8.html'> Schritt A8 </a><a href ='a9.html'> Schritt A9 </a>";
+				}
+			}
+		</script>
+		
+		<div id="inhalt">
+		
+			<div class="eineSpalte">
+				<h2> Dein Start in die Computerspieleprogrammierung mit Scratch </h2>
+				
+				<p> In der heute beginnenden Themenreihe lernst du Grundlagen im Programmieren mit blockbasierten Programmierumgebungen. 
+				in <em> Scratch </em> kann man durch das sinnvolle Verbinden solcher Blöcke interaktive Animationen und Spiele erstellen. 
+				Diese Anleitung hilft dir ein erstes Spiel zu erstellen: Peck-Mähn (ein Verwandter der bekannten Computerspielfigur Pac-Man) möchte Protagonist eines Computerspiels werden,
+				in dem Punkte gefressen werden und dabei Geistern ausgewichen werden muss.
+				</p>
+				<p> Du wirst auf demn Weg bereits viele Funktionen und Programmiertechniken kennenlernen, ohne dass diese im Detail erklärt werden. Wenn du fragen hast, stelle Sie 
+				gerne direkt oder notiere sie dir für später. Insbesondere Konzepte wie <em>Wiederholungsschleifen, Falls-Unterscheidungen</em> und <em>Variablen</em> werden wir im Anschluss an 
+				diese Anleitung nochmals genauer untersuchen.
+				<p>
+				Diese Anleitung gibt dir dabei die Wahl, wie schwierig du es dir machen möchtest. Wenn du bisher nur wenig Erfahrung mit Scratch und der Programmierung mit Programmblöcken hast, solltest du
+				zunächst die <em> Anfänger </em> Aufgaben bearbeiten. Andernfalls kannst du dich an den <em> Fortgeschritten </em>-Aufgaben versuchen. Du kannst in der Menüleiste den Schwierigkeitsgrad 
+				auswählen, indem du auf den Button drückst. So kannst du dich auch nach einer Weile umentscheiden, falls es dir doch zu leicht oder zu schwierig wird.
+				</p>
+			</div>
+			
+			<div class="SpalteKlein">
+				<p> Solltest du an einer Stelle festhängen kannst du Tipps holen. 
+				Du findest immer wieder ausklappbare Boxen, die Texthinweise, Bilder oder Videoclips enthalten, um dich auf die richtige Spur zu bringen.
+				Rechts findest du eine solche Box, probiere es also einmal aus!
+				</p>
+			</div>
+			<div class="SpalteGross">
+				<details>
+					<summary>Hier Klicken um die Hilfeboxen zu testen</summary>
+					<div>
+						Hier siehst du, wie das Peck-Mähn spiel später aussehen könnte! Klicke auf das Video um es zu starten. Du kannst auch pausieren und an bestimmte Stellen springen, falls mal etwas zu schnell geht!
+						<video controls>
+							<source src="gifs/spiel.webm" type="video/webm">
+						</video>
+					</div>	
+				</details>
+			</div>
+			
+			<div class="eineSpalte">
+			Nun geht es los! Klicke <a href="a1.html"> Hier um als Anfänger zu starten </a> oder <a href="f1.html"> hier um als Fortschritten zu beginnen. </a>
+			</div>
+
+		</div>
+		
+
+		
+		<div id="fusszeile">
+		<!--
+		<a href="#" class="previous">&laquo; Vorherige Seite</a> 
+		-->
+		<a href="#" class="top">zurück nach oben</a>
+		<!--
+		<a href="#" class="next">Nächste Seite  &raquo;</a>
+		-->
+		</div>
+		
+	</body>
+</html>	
+	

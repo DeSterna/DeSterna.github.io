@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Einführung in Scratch</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+
+	<body>
+		<div id="navigation">
+			<div id="naviLinks">
+				<button onclick="toggleMenu()" id="button" class="buttonRed","green">Fortgeschritten</button>
+			</div>
+			<div id="naviRechts">
+				<a href ='f1.html'> Schritt F1 </a> 
+				<a href ='f2.html'> Schritt F2 </a>
+				<a href ='f3.html'> Schritt F3 </a>
+				<a href ='f4.html'> Schritt F4 </a>
+				<a href ='f5.html'> Schritt F5 </a>
+				<a href ='f6.html'> Schritt F6 </a>
+				<a href ='f7.html'> Schritt F7 </a>
+				<a href ='f8.html'> Schritt F8 </a>
+				<a href ='f9.html'> Schritt F9 </a>
+			</div>
+		</div>
+		
+		<script>
+			function toggleMenu() {
+				var x = document.getElementById("naviRechts");
+				var t = document.getElementById("button");
+				if (t.innerHTML === "Anfänger") {
+					t.innerHTML = "Fortgeschritten";
+					document.getElementById("button").classList.add("buttonRed");
+					document.getElementById("button").classList.remove("buttonGreen");
+					x.innerHTML = "<a href ='f1.html'> Schritt F1 </a> <a href ='f2.html'> Schritt F2 </a><a href ='f3.html'> Schritt F3 </a><a href ='F4.html'> Schritt F4 </a><a href ='f5.html'> Schritt F5 </a><a href ='F6.html'> Schritt F6 </a><a href ='F7.html'> Schritt F7 </a><a href ='F8.html'> Schritt F8 </a><a href ='a9.html'> Schritt F9 </a>";
+				} else {
+					t.innerHTML = "Anfänger";
+					document.getElementById("button").classList.add("buttonGreen");
+					document.getElementById("button").classList.remove("buttonRed");
+					x.innerHTML = "<a href ='a1.html'> Schritt A1 </a> <a href ='a2.html'> Schritt A2 </a><a href ='a3.html'> Schritt A3 </a><a href ='a4.html'> Schritt A4 </a><a href ='a5.html'> Schritt A5 </a><a href ='a6.html'> Schritt A6 </a><a href ='a7.html'> Schritt A7 </a><a href ='a8.html'> Schritt A8 </a><a href ='a9.html'> Schritt A9 </a>";
+				}
+			}
+		</script>
+
+		<div id="inhalt">
+
+			<div class="eineSpalte">
+				<h2> Schritt F9: Mit Hecken ein Level bauen</h2>
+
+			</div>
+			<div class="SpalteKlein">
+				<img src="sprites/Hecke.png" width=200px>
+				<img src="img/farbe.png">
+
+
+			</div>
+			<div class="SpalteGross" style="margin-bottom: 30px">
+				<h3> Mit der Hecke kollidieren </h3>
+				<p>
+					Füge eine neue Figur hinzu und wähle dieses Mal <em>Hecke.png</em>. Setze sie wie immer auch eine gute Größe. Die Hecke hat einen schwarzen Rand, das nutzen wir nun aus!
+				</p>
+				<p>
+					Erstelle ein Script, so dass Peck-Mähn immer, wenn er mit der Farbe schwarz kollidiert einen Schritt rückwärts macht. Starte dabei mit einem zweiten 
+					Ereignisblock mit einer grünen Flagge.
+				</p>
+					<details>
+						<summary>Tipp:Rückwärts?</summary>
+						<div>
+							Der Schritte Block nimmt auch negative Zahlen.
+						</div>	
+					</details>
+				</p>
+
+				<details>
+					<summary>Alles hinbekommen? Hier gibts alle Schritte im Video zur Kontrolle oder Hilfe.</summary>
+					<div>
+						Zum Testen habe ich den Geist langsamer gemacht. Das ist aber nicht zwingend notwendig.
+						<video controls>
+							<source src="gifs/13.webm" type="video/webm">
+						</video>
+					</div>	
+				</details>
+				<p>  </p>
+			</div>
+			
+			<div class="SpalteGross">
+				<h3> Punkte verschwinden lassen </h3>
+				<p>
+					Damit wir gleich ein richtiges Level bauen können, müssen wir den Punkt nochmal etwas verändern. Er soll verschwinden, sobald er von Peck-Mähn berührt wird.
+					Denke daran, dass er auch am Start wieder sichtbar gemacht werden muss.
+				</p>
+				
+				<h3> Ein Level voller Kopien </h3>
+				<p> 
+					Wir füllen nun das Level mit Kopien der Punkte und Hecken. Teste bitte <b>BEVOR du kopierst</b> nochmal sorgfältig ob alles richtig funktioniert.
+					Findest du einen Fehler, müsstest du ihn selbst in allen Kopien ebenfalls ändern!
+				</p>
+				<details>
+					<summary>Alles hinbekommen? Hier gibts alle Schritte im Video zur Kontrolle oder Hilfe.</summary>
+					<div>
+						<video controls>
+							<source src="gifs/14.webm" type="video/webm">
+						</video>
+					</div>	
+				</details>
+				
+				<h3> Das Spiel gewinnen </h3>
+				<p> Es fehlt eine letzte Funktion: Das Spiel soll enden, wenn alle Punkte gesammelt wurden. Nutze den grünen Vergleichsblock rechts um das zu erreichen!
+				<details>
+					<summary>Tipp?</summary>
+					<div>
+						<p>Neuer Grüne-Flagge-Block, Wiederhole Fortlaufend, Falls</p>
+						<img src="img/spielstand.png">
+						<p>Stoppe alles.</p>
+					</div>	
+				</details>
+				</p>
+				<details>
+					<summary>Alles hinbekommen? Hier gibts alle Schritte im Video zur Kontrolle oder Hilfe.</summary>
+					<div>
+						<video controls>
+							<source src="gifs/15.webm" type="video/webm">
+						</video>
+					</div>	
+				</details>
+			</div>
+			<div class="SpalteKlein">
+				<p>
+				<img src="img/zeige.png">
+				<img src="img/kopie.png">
+				</p>
+				<img src="img/ende.png">
+			</div>
+		</div>
+
+
+
+		<div id="fusszeile">
+
+		<a href="f8.html" class="previous">&laquo; Vorherige Seite</a>
+
+		<a href="#" class="top">zurück nach oben</a>
+
+		<a href="ende.html" class="next">Nächste Seite  &raquo;</a>
+
+		</div>
+
+	</body>
+</html>

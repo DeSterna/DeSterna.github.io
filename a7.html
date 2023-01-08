@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Einführung in Scratch</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+
+	<body>
+		<div id="navigation">
+			<div id="naviLinks">
+				<button onclick="toggleMenu()" id="button" class="buttonGreen","green">Anfänger</button>
+			</div>
+			<div id="naviRechts">
+				<a href ='a1.html'> Schritt A1 </a> 
+				<a href ='a2.html'> Schritt A2 </a>
+				<a href ='a3.html'> Schritt A3 </a>
+				<a href ='a4.html'> Schritt A4 </a>
+				<a href ='a5.html'> Schritt A5 </a>
+				<a href ='a6.html'> Schritt A6 </a>
+				<a href ='a7.html'> Schritt A7 </a>
+				<a href ='a8.html'> Schritt A8 </a>
+				<a href ='a9.html'> Schritt A9 </a>
+			</div>
+		</div>
+		
+		<script>
+			function toggleMenu() {
+				var x = document.getElementById("naviRechts");
+				var t = document.getElementById("button");
+				if (t.innerHTML === "Anfänger") {
+					t.innerHTML = "Fortgeschritten";
+					document.getElementById("button").classList.add("buttonRed");
+					document.getElementById("button").classList.remove("buttonGreen");
+					x.innerHTML = "<a href ='f1.html'> Schritt F1 </a> <a href ='f2.html'> Schritt F2 </a><a href ='f3.html'> Schritt F3 </a><a href ='F4.html'> Schritt F4 </a><a href ='f5.html'> Schritt F5 </a><a href ='F6.html'> Schritt F6 </a><a href ='F7.html'> Schritt F7 </a><a href ='F8.html'> Schritt F8 </a><a href ='a9.html'> Schritt F9 </a>";
+				} else {
+					t.innerHTML = "Anfänger";
+					document.getElementById("button").classList.add("buttonGreen");
+					document.getElementById("button").classList.remove("buttonRed");
+					x.innerHTML = "<a href ='a1.html'> Schritt A1 </a> <a href ='a2.html'> Schritt A2 </a><a href ='a3.html'> Schritt A3 </a><a href ='a4.html'> Schritt A4 </a><a href ='a5.html'> Schritt A5 </a><a href ='a6.html'> Schritt A6 </a><a href ='a7.html'> Schritt A7 </a><a href ='a8.html'> Schritt A8 </a><a href ='a9.html'> Schritt A9 </a>";
+				}
+			}
+		</script>
+
+		<div id="inhalt">
+
+			<div class="eineSpalte">
+				<h2> Schritt A7: Peck-Mähn animieren - Kostümwechsel</h2>
+
+			</div>
+			<div class="SpalteGross">
+				<p>
+					Ein <b><em>richtiges</em></b> Spiel hat auch Animationen und nicht nur bewegliche Standbilder!! Jedes Mal wenn Peck-Mähn einen Punkt einsammelt,
+					soll er daher den Mund schließen und nach einer kurzen Zeit wieder öffnen. Um das hinzubekommen nutzen wird gleich zwei neue Konzepte: Kostüme und Nachrichten.
+				</p>
+				<h3> Ein zweites Kostüm für Peck-Mähn </h3>
+				<p> Klicke Peck-Mähns Figur an und öffne den Tab <em>Kostüme</em>. Füge hier das bild <em>rot zu.png</em> als zweites Kostüm hinzu.</p>
+			</div>
+			<div class="SpalteKlein">
+				<img src="img/kost.png">
+			</div>
+			<div class="SpalteKlein">
+				<img src="img/nachricht.png" >
+				<img src="img/warte.png" >
+				<img src="img/empfangen.png">
+				<img src="img/kost2.png" width=200px>
+			</div>
+			<div class="SpalteGross">
+				<h3> Punkt sendet Nachricht </h3>
+					<p>
+						Klicke auf die Figur des Punktes. Lass ihn immer, wenn er berührt wird eine Nachricht an alle Senden, dass er gefressen wurde.
+					</p>
+				<h3> Peckmähn empfängt Nachricht </h3>
+					<p>
+						Erstelle bei Peckmähns Figur ein neues Skript, dass beginnt wenn er die gesendete Nachricht empfängt. Hier soll er sein Kostüm wechseln, kurz warten,
+						und dann zurückwechseln.
+					</p>
+				<details>
+					<summary>Alles hinbekommen? Hier gibts alle Schritte im Video zur Kontrolle oder Hilfe.</summary>
+					<div>
+						<video controls>
+							<source src="gifs/10.webm" type="video/webm">
+						</video>
+					</div>	
+				</details>
+			</div>
+			
+		</div>
+
+
+
+		<div id="fusszeile">
+
+		<a href="a6.html" class="previous">&laquo; Vorherige Seite</a>
+
+		<a href="#" class="top">zurück nach oben</a>
+
+		<a href="a8.html" class="next">Nächste Seite  &raquo;</a>
+
+		</div>
+
+	</body>
+</html>

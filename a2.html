@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Einführung in Scratch</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+
+	<body>		
+		<div id="navigation">
+			<div id="naviLinks">
+				<button onclick="toggleMenu()" id="button" class="buttonGreen","green">Anfänger</button>
+			</div>
+			<div id="naviRechts">
+				<a href ='a1.html'> Schritt A1 </a> 
+				<a href ='a2.html'> Schritt A2 </a>
+				<a href ='a3.html'> Schritt A3 </a>
+				<a href ='a4.html'> Schritt A4 </a>
+				<a href ='a5.html'> Schritt A5 </a>
+				<a href ='a6.html'> Schritt A6 </a>
+				<a href ='a7.html'> Schritt A7 </a>
+				<a href ='a8.html'> Schritt A8 </a>
+				<a href ='a9.html'> Schritt A9 </a>
+			</div>
+		</div>
+		
+		<script>
+			function toggleMenu() {
+				var x = document.getElementById("naviRechts");
+				var t = document.getElementById("button");
+				if (t.innerHTML === "Anfänger") {
+					t.innerHTML = "Fortgeschritten";
+					document.getElementById("button").classList.add("buttonRed");
+					document.getElementById("button").classList.remove("buttonGreen");
+					x.innerHTML = "<a href ='f1.html'> Schritt F1 </a> <a href ='f2.html'> Schritt F2 </a><a href ='f3.html'> Schritt F3 </a><a href ='F4.html'> Schritt F4 </a><a href ='f5.html'> Schritt F5 </a><a href ='F6.html'> Schritt F6 </a><a href ='F7.html'> Schritt F7 </a><a href ='F8.html'> Schritt F8 </a><a href ='a9.html'> Schritt F9 </a>";
+				} else {
+					t.innerHTML = "Anfänger";
+					document.getElementById("button").classList.add("buttonGreen");
+					document.getElementById("button").classList.remove("buttonRed");
+					x.innerHTML = "<a href ='a1.html'> Schritt A1 </a> <a href ='a2.html'> Schritt A2 </a><a href ='a3.html'> Schritt A3 </a><a href ='a4.html'> Schritt A4 </a><a href ='a5.html'> Schritt A5 </a><a href ='a6.html'> Schritt A6 </a><a href ='a7.html'> Schritt A7 </a><a href ='a8.html'> Schritt A8 </a><a href ='a9.html'> Schritt A9 </a>";
+				}
+			}
+		</script>
+
+		<div id="inhalt">
+
+			<div class="eineSpalte">
+				<h2> Schritt A2: Hintergrund und Figuren einfügen.</h2>
+			</div>
+			<div class="SpalteGross">
+			<h3> Bühnenbild einfügen </h3>
+				<p>
+					Füge den Hintergrund als neues Bühnenbild ein, indem du unten rechts die Maus auf das Symbol für eine neues Bühnenbild hälst, und 
+					dann die Funktion <em>Bühnenbild hochladen</em> wählst.
+				</p>
+				<p> 
+					Wähle dort erneut den Downloads-Ordner aus, öffne den sprites-Ordner und wähle die Datei <em>Hintergrund.png</em> aus.
+				</p>
+				<details>
+					<summary>Alles hinbekommen? Hier gibts alle Schritte im Video zur Kontrolle oder Hilfe.</summary>
+					<div>
+						<video controls>
+							<source src="gifs/2.webm" type="video/webm">
+						</video>
+					</div>	
+				</details>
+			</div>
+			<div class="SpalteKlein">
+				<img src="img/bühne.png">
+			</div>
+			
+			<div class="SpalteGross">
+			<h3> Erste Figur einfügen </h3>
+				<p>
+					Lösche zunächst die Katze im Figuren-Fenster unten rechts.
+				</p>
+				<p> 
+					Füge Peck-Mähn hinzu, indem du die Maus auf das Symbol für eine Figur hälst und <em>Figur hochladen</em>. wählst. Der Ordner sollte dieses Mal
+					bereits automatisch ausgewählt sein. Wähle die Datei <em> rot auf.png </em>
+				</p>
+				<p> 
+					Benenne die Figur danach in "Peck-Mähn" um. Das geht auch unten rechts im Figuren-Fenster.
+				</p>
+				<p> 
+					Die Figur ist außerdem viel zu groß. Ändere ihre Größe auf 25.
+				</p>
+				<details>
+					<summary>Alles hinbekommen? Hier gibts alle Schritte im Video zur Kontrolle oder Hilfe.</summary>
+					<div>
+						<video controls>
+							<source src="gifs/3.webm" type="video/webm">
+						</video>
+					</div>	
+				</details>
+			</div>
+			<div class="SpalteKlein">
+				<img src="img/figur.png">
+			</div>
+
+		</div>
+
+
+
+		<div id="fusszeile">
+
+		<a href="a1.html" class="previous">&laquo; Vorherige Seite</a>
+
+		<a href="#" class="top">zurück nach oben</a>
+
+		<a href="a3.html" class="next">Nächste Seite  &raquo;</a>
+
+		</div>
+
+	</body>
+</html>

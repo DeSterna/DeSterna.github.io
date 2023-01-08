@@ -1,0 +1,253 @@
+h1 { font-family: Consolas, monaco, monospace; font-size: 35px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
+h2 { font-family: Consolas, monaco, monospace; font-size: 30px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
+h3 { font-family: Consolas, monaco, monospace; font-size: 25px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } 
+
+
+body {
+	background-color: #edf4ff;
+	font-family: Consolas, monaco, monospace; font-size: 13px; 
+	font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px;
+	color: black;
+	text-align: justify;
+}
+
+#header {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 15px;
+	background-color: #4c97ff;
+	border: 5px solid;
+	border-color: #f8b148;
+	color: white;
+	overflow: auto;
+}
+
+#headerLinks {
+	width : 20%;
+	min-width: 200px;
+	height: auto;
+	float: left;
+	padding-top:5px;
+	padding-left: 5px;
+}
+
+#headerRechts {
+	width : 75%;
+	height: auto;
+	float: left;
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#navigation {
+	width: 98%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	background-color: #4c97ff;
+	color: white;
+	border: 2px solid;
+	border-bottom: 0px solid;
+	border-color: #f8b148;
+	color: white;
+	overflow:auto;
+}
+
+
+
+#naviLinks{
+	float:left;
+	width: 10%;
+	min-width: 170px;
+}
+
+#naviRechts{
+	float:left;
+}
+
+
+#inhalt {
+	width: 99%;
+	height: auto;
+	min-height:200px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #fcfcfc;
+	border: 2px solid;
+	border-color: #f8b148;
+	color: black;
+	overflow:auto;
+}
+
+#fusszeile {
+	width: 99%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+    display: block;
+}
+
+.eineSpalte {
+	width : 98%;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 15px;
+	float: left;
+}
+
+.SpalteKlein {
+	width : 28%;
+	height: auto;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 15px;
+	float: left;
+}
+
+.SpalteGross {
+	width : 68%;
+	height: auto;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 15px;
+	float: left;
+}
+
+details {
+	margin-bottom: 10px;
+}
+
+details > summary {
+	background-color: #fdb;
+	cursor: pointer;
+	padding: .5rem 1rem;
+	color: black;
+	font-size: 18px;
+	
+}
+
+
+details > summary > * {
+	display: inline;
+}
+
+details > div {
+	border: 5px solid #fdb;
+	margin-top: 0;
+	padding: 1rem;
+	color: black;
+	text-align: center;
+}
+
+a {
+	display: inline-block;
+	padding: 8px 16px;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+#naviRechts > a{
+	color: white;
+	font-size: 20px;
+}
+
+}
+#naviRechts > a:hover{
+	background-color: #4588e5;
+	color: #f8b148;
+}
+a:hover {
+	background-color: #4588e5;
+	color: #f8b148;
+}
+
+.previous {
+	background-color: #4c97ff;
+	color: black;
+	float: left;
+	font-size: 25px;
+  	border: 2px solid;
+	border-color: #f8b148;
+	color: white;
+	margin-left: -2px;
+}
+
+.next {
+	background-color: #4c97ff;
+	color: black;
+	float: right;
+	font-size: 25px;
+	border: 2px solid;
+	border-color: #f8b148;
+	color: white;
+	margin-right: -2px;
+}
+
+.top {
+	background-color: #4c97ff;
+	color: black;
+	font-size: 25px;
+  	border: 2px solid;
+	border-color: #f8b148;
+	color: white;
+  }
+
+video {
+	max-width:100%;
+	height:auto;
+	max-height:100%
+}
+
+
+
+.buttonGreen {
+  padding: 5px 15px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #15ab1c;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px #999;
+  margin-bottom: 5px;
+  width: 160px;
+}
+
+.buttonGreen:hover {background-color: #129418}
+
+.buttonGreen:active {
+  background-color: #129418;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.buttonRed {
+  padding: 5px 15px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #f9aa37;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 3px #999;
+  margin-bottom: 5px;
+  width: 160px;
+}
+
+.buttonRed:hover {background-color: #be8737}
+
+.buttonRed:active {
+  background-color: #be8737;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
