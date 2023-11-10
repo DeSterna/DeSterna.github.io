@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,59 +11,236 @@
             flex-direction: column;
             align-items: center;
             margin: 0;
+            background-color: black;
         }
         .row {
             display: flex;
-            margin-bottom: 5px;
+            margin-top: 5px;
+            margin-right: 5px;
+            margin-left: 5px;
+            position: relative;
+            z-index: 1;
         }
         .image-container {
             margin: 5px;
             flex: 1;
             max-width: calc(33.33% - 5px);
             box-sizing: border-box;
+            
+        }
+        .image-container:hover {
+            filter: brightness(30%);
+            
         }
         .image-container img {
             width: 100%;
             height: auto;
             display: block;
+            border-radius: 2%;
+        }
+        .player {
+            width: 52.5vw;
+            height: 80vh;
+            
+        }
+        .game {
+            width: 52.5vw;
+            height: 80vh;
+            position: fixed;
+            z-index: 3;
+            margin-left: 23.75vw;
+            margin-right: 23.75vw;
+            margin-top: 5vw;
+            margin-bottom: 5vw;
+        }
+        .shadow {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.85);
+            
+        }
+        .hidden {
+            display: none;
+        }
+        .scratch img {
+            width: 3vw;
+            position: fixed;
+            z-index: 4;
+        }
+        .scratch {
+            width: 3vw;
+            top: 0;
+            right: 0;
+            position: fixed;
+            z-index: 4;
         }
     </style>
 </head>
 <body>
+
+    <div class="shadow hidden" id="shadow"></div>
+
+    <div class="scratch hidden" id="peck_project">
+        <a href="https://scratch.mit.edu/projects/922134120/" target="_blank"><img src="scratch.png"></a>
+    </div>
+    <div class="scratch hidden" id="block_project">
+        <a href="https://scratch.mit.edu/projects/922132226/" target="_blank"><img src="scratch.png"></a>
+    </div>
+    <div class="scratch hidden" id="floppy_project">
+        <a href="https://scratch.mit.edu/projects/922123749/" target="_blank"><img src="scratch.png"></a>
+    </div>
+    <div class="scratch hidden" id="speed_project">
+        <a href="https://scratch.mit.edu/projects/922127184/" target="_blank"><img src="scratch.png"></a>
+    </div>
+    <div class="scratch hidden" id="line_project">
+        <a href="https://scratch.mit.edu/projects/922128612/" target="_blank"><img src="scratch.png"></a>
+    </div>
+    <div class="scratch hidden" id="ninja_project">
+        <a href="https://scratch.mit.edu/projects/922130475/" target="_blank"><img src="scratch.png"></a>
+    </div>
+
+    <div class="game hidden" id="peck_player">
+        <iframe class="player hidden" id="peck" src="https://scratch.mit.edu/projects/922134120/embed/"></iframe>
+    </div>
+    <div class="game hidden" id="block_player">
+        <iframe class="player hidden" id="block" src="https://scratch.mit.edu/projects/922132226/embed/"></iframe>
+    </div>
+    <div class="game hidden" id="floppy_player">
+        <iframe class="player hidden" id="floppy" src="https://scratch.mit.edu/projects/922123749/embed/"></iframe>
+    </div>
+    <div class="game hidden" id="speed_player">
+        <iframe class="player hidden" id="speed" src="https://scratch.mit.edu/projects/922127184/embed/"></iframe>
+    </div>
+    <div class="game hidden" id="line_player">
+        <iframe class="player hidden" id="line" src="https://scratch.mit.edu/projects/922128612/embed/"></iframe>
+    </div>
+    <div class="game hidden" id="ninja_player">
+        <iframe class="player hidden" id="ninja" src="https://scratch.mit.edu/projects/922130475/embed/"></iframe>
+    </div>
+
     <div class="row">
-        <div class="image-container">
-            <a href="https://scratch.mit.edu/projects/922134120/fullscreen/" target="_blank">
-                <img src="peck.png" alt="Image 1">
-            </a>
+        <div class="image-container" id="peck_btn">
+                    <img src="peck.png" alt="Image 1">
+                </a>
         </div>
-        <div class="image-container">
-            <a href="https://scratch.mit.edu/projects/922132226/fullscreen/" target="_blank">
+        <div class="image-container" id="block_btn">
                 <img src="block.png" alt="Image 2">
             </a>
         </div>
-        <div class="image-container">
-            <a href="https://scratch.mit.edu/projects/922123749/fullscreen/" target="_blank">
+        <div class="image-container" id="floppy_btn">
                 <img src="floppy.png" alt="Image 3">
             </a>
         </div>
     </div>
 
     <div class="row">
-        <div class="image-container">
-            <a href="https://scratch.mit.edu/projects/922127184/fullscreen/" target="_blank">
+        <div class="image-container" id="speed_btn">
                 <img src="speed.png" alt="Image 4">
             </a>
         </div>
-        <div class="image-container">
-            <a href="https://scratch.mit.edu/projects/922128612/fullscreen/" target="_blank">
+        <div class="image-container" id="line_btn">
                 <img src="line.png" alt="Image 5">
             </a>
         </div>
-        <div class="image-container">
-            <a href="https://scratch.mit.edu/projects/922130475/fullscreen/" target="_blank">
+        <div class="image-container" id="ninja_btn">
                 <img src="ninja.png" alt="Image 6">
             </a>
         </div>
     </div>
+
+    <script>
+
+        const peck_player = document.getElementById("peck_player");
+        const block_player = document.getElementById("block_player");
+        const floppy_player = document.getElementById("floppy_player");
+        const speed_player = document.getElementById("speed_player");
+        const line_player = document.getElementById("line_player");
+        const ninja_player = document.getElementById("ninja_player");
+        const shadow = document.getElementById("shadow");
+        const peck_btn = document.getElementById("peck_btn");
+        const block_btn = document.getElementById("block_btn");
+        const floppy_btn = document.getElementById("floppy_btn");
+        const speed_btn = document.getElementById("speed_btn");
+        const line_btn = document.getElementById("line_btn");
+        const ninja_btn = document.getElementById("ninja_btn");
+        const peck = document.getElementById("peck");
+        const block = document.getElementById("block");
+        const floppy = document.getElementById("floppy");
+        const speed = document.getElementById("speed");
+        const line = document.getElementById("line");
+        const ninja = document.getElementById("ninja");
+        const peck_project = document.getElementById("peck_project");
+        const block_project = document.getElementById("block_project");
+        const floppy_project = document.getElementById("floppy_project");
+        const speed_project = document.getElementById("speed_project");
+        const line_project = document.getElementById("line_project");
+        const ninja_project = document.getElementById("ninja_project");
+
+        shadow.addEventListener("click", function() {
+            peck_player.classList.add("hidden");
+            block_player.classList.add("hidden");
+            floppy_player.classList.add("hidden");
+            speed_player.classList.add("hidden");
+            line_player.classList.add("hidden");
+            ninja_player.classList.add("hidden");
+            shadow.classList.add("hidden");
+            peck.classList.add("hidden");
+            block.classList.add("hidden");
+            floppy.classList.add("hidden");
+            speed.classList.add("hidden");
+            line.classList.add("hidden");
+            ninja.classList.add("hidden");
+            peck_project.classList.add("hidden");
+            block_project.classList.add("hidden");
+            floppy_project.classList.add("hidden");
+            speed_project.classList.add("hidden");
+            line_project.classList.add("hidden");
+            ninja_project.classList.add("hidden");
+        });
+        peck_btn.addEventListener("click", function() {
+            peck_player.classList.remove("hidden");
+            peck_project.classList.remove("hidden");
+            shadow.classList.remove("hidden");
+            peck.classList.remove("hidden");
+            peck.src = peck.src;
+        });
+        block_btn.addEventListener("click", function() {
+            block_player.classList.remove("hidden");
+            block_project.classList.remove("hidden");
+            shadow.classList.remove("hidden");
+            block.classList.remove("hidden");
+            block.src = block.src;
+        });
+        floppy_btn.addEventListener("click", function() {
+            floppy_player.classList.remove("hidden");
+            floppy_project.classList.remove("hidden");
+            shadow.classList.remove("hidden");
+            floppy.classList.remove("hidden");
+            floppy.src = floppy.src;
+        });
+        speed_btn.addEventListener("click", function() {
+            speed_player.classList.remove("hidden");
+            speed_project.classList.remove("hidden");
+            shadow.classList.remove("hidden");
+            speed.classList.remove("hidden");
+            speed.src = speed.src;
+        });
+        line_btn.addEventListener("click", function() {
+            line_player.classList.remove("hidden");
+            line_project.classList.remove("hidden");
+            shadow.classList.remove("hidden");
+            line.classList.remove("hidden");
+            line.src = line.src;
+        });
+        ninja_btn.addEventListener("click", function() {
+            ninja_player.classList.remove("hidden");
+            ninja_project.classList.remove("hidden");
+            shadow.classList.remove("hidden");
+            ninja.classList.remove("hidden");
+            ninja.src = ninja.src;
+        });
+    </script>
 </body>
 </html>
