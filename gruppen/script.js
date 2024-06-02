@@ -5,8 +5,8 @@ function setupGroupNames() {
     // Clear previous group name inputs
     groupNamesContainer.innerHTML = "";
 
-    if (groupCount <= 0) {
-        alert("Bitte geben Sie eine gültige Anzahl von Gruppen ein.");
+    if (isNaN(groupCount) || groupCount < 2) {
+        alert("Bitte geben Sie eine gültige Anzahl von Gruppen (größer als 1) ein.");
         return;
     }
 
@@ -21,18 +21,19 @@ function setupGroupNames() {
 
     // Show the "Create Groups" button
     document.getElementById("createGroupsButton").style.display = "block";
+	document.querySelector('.group-names-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function createGroups() {
-    const names = document.getElementById("names").value.split(",").map(name => name.trim()).filter(name => name !== "");
+    const names = document.getElementById("names").value.split(/\r?\n/).map(name => name.trim()).filter(name => name !== "");
     const groupCount = parseInt(document.getElementById("groupCount").value);
     const resultContainer = document.getElementById("result");
 
     // Clear previous results
     resultContainer.innerHTML = "";
 
-    if (names.length === 0 || groupCount <= 0) {
-        alert("Bitte geben Sie gültige Namen und Gruppenanzahl ein.");
+    if (names.length === 0 || isNaN(groupCount) || groupCount < 2) {
+        alert("Bitte geben Sie gültige Namen und eine Gruppenanzahl größer als 1 ein.");
         return;
     }
 
@@ -73,4 +74,12 @@ function createGroups() {
             }, nameIndex * 500); // Delay each name by 500ms
         });
     });
+
+    // Scroll to result container
+
+	document.body.style.height = "3000px"; // Temporär verlängern
+    document.querySelector('.result-container').scrollIntoView({ behavior: 'smooth', block: 'start'});
+	setTimeout(function() {
+                document.body.style.height = originalHeight; // Wiederherstellen
+            }, 1000); // Warte, bis das Scrollen abgeschlossen ist
 }

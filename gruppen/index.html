@@ -7,18 +7,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Gruppen Zulosung</h1>
-        <textarea id="names" placeholder="Namen hier eingeben, getrennt durch Kommas"></textarea>
-        <input type="number" id="groupCount" placeholder="Anzahl der Gruppen">
-        <button onclick="setupGroupNames()">Gruppennamen festlegen</button>
+
+    <div class="main-container">
+
+        <div class="input-container">
+            <h2> Gib die Namen ein!</h2>
+            <textarea id="names" placeholder="Namen hier eingeben, getrennt durch Umbrüche"></textarea>
+            <input type="number" id="groupCount" placeholder="Anzahl der Gruppen" min="2">
+            <button onclick="setupGroupNames()">Gruppennamen festlegen</button>
+        </div>
         
-        <div id="groupNamesContainer">
+        <div class="group-names-container">
             <h2>Gruppennamen</h2>
             <div id="groupNames"></div>
             <button id="createGroupsButton" style="display: none;" onclick="createGroups()">Gruppen erstellen</button>
         </div>
-        
+    </div>
+    
+    <div class="result-container">
+        <h2>Fertige Gruppen</h2>
         <div id="result"></div>
     </div>
     
