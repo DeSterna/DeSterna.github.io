@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gruppen Zulosung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gruppen Zulosung</h1>
+        <textarea id="names" placeholder="Namen hier eingeben, getrennt durch Kommas"></textarea>
+        <input type="number" id="groupCount" placeholder="Anzahl der Gruppen">
+        <button onclick="setupGroupNames()">Gruppennamen festlegen</button>
+        
+        <div id="groupNamesContainer">
+            <h2>Gruppennamen</h2>
+            <div id="groupNames"></div>
+            <button id="createGroupsButton" style="display: none;" onclick="createGroups()">Gruppen erstellen</button>
+        </div>
+        
+        <div id="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
